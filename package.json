@@ -13,11 +13,11 @@
     "globby": "^11.0.0"
   },
   "devDependencies": {
+    "husky": "^4.2.5"
   },
   "husky": {
     "hooks": {
       "pre-commit": "eslint --fix"
     }
   }
-
 }
