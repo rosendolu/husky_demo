@@ -6,3 +6,5 @@ log('324234 sfasdf');
 
 log('lint test');
 log('random ');
+
+log('console');
