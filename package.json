@@ -13,14 +13,11 @@
     "globby": "^11.0.0"
   },
   "devDependencies": {
-    "lint-staged": "^10.2.6"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "eslint --fix"
     }
-  },
-  "lint-staged": {
-    "*.js": "eslint --fix"
   }
+
 }
