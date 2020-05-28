@@ -8,3 +8,4 @@ log('lint test');
 log('random ');
 
 log('console');
+log("false false")
