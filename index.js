@@ -1,11 +1,23 @@
 const { log } = console;
+const fs = require('fs');
+const globby = require('globby');
+const { resolve, join } = require('path');
+(async () => {
+	// eslint-disable-next-line indent
+	const paths = await globby(['**.js'], { gitignore: true });
 
-log('index2                       ');
-log('index 1 index 2 ');
-log('324234 sfasdf');
-
-log('lint test');
-log('random ');
-
-log('console');
-log("false false")
+	console.log(paths);
+	for (let i of paths) {
+		// fs.readFile(join(__dirname, i), (err, buffer) => {
+		// 	if (!err) {
+		// 		log(buffer.toString());
+		// 		return;
+		// 	}
+		// 	log(err);
+		// });
+		if (i.indexOf('index') === -1) {
+			require(join(__dirname, i));
+		}
+	}
+	//=> ['unicorn', 'rainbow']
+})();
